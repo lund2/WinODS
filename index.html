@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<--written by clare-->
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+	body {
+  		font-family: Arial, Helvetica, sans-serif;
+	}
+
+	* {
+  		box-sizing: border-box;
+	}
+
+	/* Create a column layout with Flexbox */
+	.row {
+  		display: flex;
+        align-items: stretch;
+	}
+
+	/* Left column (menu) */
+	.left {
+  		flex: 30%;
+  		padding: 15px 0;
+        margin-bottom: auto;
+	}
+
+	.left h2 {
+  		padding-left: 8px;
+	}
+
+	/* Right column (page content) */
+	.right {
+  		flex: 70%;
+  		padding: 15px;
+	}
+
+	/* Style the search box */
+	#mySearch {
+  		width: 100%;
+  		font-size: 18px;
+  		padding: 11px;
+  		border: 1px solid #ddd;
+	}
+
+	/* Style the navigation menu inside the left column */
+	#myMenu {
+  		list-style-type: none;
+  		padding: 0;
+  		margin: 0;
+	}
+
+	#myMenu li a {
+  		padding: 12px;
+  		text-decoration: none;
+  		color: black;
+  		display: block
+	}
+
+	#myMenu li a:hover {
+  		background-color: #eee;
+	}
+	</style>
+</head>
+<body>
+
+<title> Open Data Access Portal </title>
+
+<h2>City of Windsor - Open Data Access Portal</h2>
+
+<div class="row">
+  <div class="left" style="background-color:#4682B4;">
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+    <ul id="myMenu">
+      <li><a href="#">Download Search Results</a></li>
+      <li><a href="#">Suggest Data</a></li>
+      <li><a href="#">Agriculture</a></li>
+      <li><a href="#">Economics</a></li>
+      <li><a href="#">Education</a></li>
+      <li><a href="#">Health and Safety</a></li>
+      <li><a href="#">History</a></li>
+      <li><a href="#">Labour</a></li>
+      <li><a href="#">Law</a></li>
+      <li><a href="#">Nature and Environment</a></li>
+      <li><a href="#">Science and Technology</a></li>
+      <li><a href="#">Transport</a></li>
+    </ul>
+  </div>
+  
+  <div class="right" style="background-color:#ddd;">
+    <h2>Search Results</h2>
+    <h3>Title</h3>
+    <p>Brief Description...</p>
+    <p>Last Updated:mm/dd/yyy</p>
+    <p>Date Published:mm/dd/yyy</p>
+    <p>Organization:____________</p>
+  </div>
+</div>
+
+<script>
+function myFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+</body>
+</html>
