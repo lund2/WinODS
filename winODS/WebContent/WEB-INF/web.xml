@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app>
+
+<context-param> 
+   <description>Location to store uploaded file</description> 
+   <param-name>file-upload</param-name> 
+   <param-value>
+      c:\apache-tomcat-8.5.59\webapps\data\
+   </param-value> 
+</context-param>
+
+
+</web-app>
