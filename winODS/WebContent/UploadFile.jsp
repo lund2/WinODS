@@ -7,12 +7,15 @@
 
 <%
 
-
-	String destination ="/files";
-	String destinationRealPath = application.getRealPath(destination);
+	//this string will depend on the destination you have set on your local machine, ex:
+	String uploadHere ="C:\\Users\\username\\eclipse-workspace\\uploadedfiles";
+	
 	DiskFileItemFactory factory = new DiskFileItemFactory();
 	factory.setSizeThreshold(1024);
-	factory.setRepository(new File(destinationRealPath));
+	
+	//this is where the file will go if it exceeds threshold limit
+	//once again, local machine dependent
+	factory.setRepository(new File("C:\\Users\\username\\eclipse-workspace"));
 	ServletFileUpload uploader = new ServletFileUpload(factory);
 	
 	try
@@ -23,7 +26,7 @@
 		while(iterator.hasNext())
 		{
 			FileItem item = (FileItem)iterator.next();
-			File file = new File(destinationRealPath, item.getName());
+			File file = new File(uploadHere, item.getName());
 			item.write(file);
 			out.write("<p>"+file.getName()+" was uploaded successfully</p>");
 			
