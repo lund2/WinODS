@@ -10,6 +10,11 @@
 	//this string will depend on the destination you have set on your local machine, ex:
 	String uploadHere ="C:\\Users\\username\\eclipse-workspace\\uploadedfiles";
 	
+	/*
+	*IF IT IS RUNNING ON MAC
+	*String uploadHere ="/Users/username/eclipse-workspace/uploadedfiles";
+	*/
+	
 	DiskFileItemFactory factory = new DiskFileItemFactory();
 	factory.setSizeThreshold(1024);
 	
