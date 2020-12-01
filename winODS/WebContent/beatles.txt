@@ -1,0 +1,4 @@
+1, John, Singer
+2, Ringo, Drums
+3, Paul, Bass
+4, George, Guitar
