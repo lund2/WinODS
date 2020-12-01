@@ -103,7 +103,7 @@
   
     <a href="beatles.txt" download='beatles.txt' target="_blank">Beatles File</a> 
       
-      <h3>File Upload test new destination:</h3>
+      <h3>File Upload:</h3>
       Select a file to upload: <br />
       <form action = "uploadTest.jsp" method = "post"
          enctype = "multipart/form-data">
