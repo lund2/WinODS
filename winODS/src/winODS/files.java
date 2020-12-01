@@ -1,45 +1,33 @@
 package winODS;
 
+import javax.servlet.http.HttpServlet;
+
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class files {
 
-	public static void main(String[] args) throws IOException {
+	public static void listFiles() throws IOException {
 	  
 		
-		/*
-		 * 
-		 * 
-		 * OLD
-		 * 
-		String uploadFilePath = "../../../Justi/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/winODS/files";
-		Path uploadPath = Paths.get("C:\\Users\\Justi\\eclipse-workspace\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\winODS\\files");
-		//Files.list(Paths.get("WebContent")).forEach(System.out::println);
-		Files.list(Paths.get(uploadFilePath)).forEach(System.out::println);
-		Files.list(Paths.get(uploadFilePath).subpath(2, 3)).forEach(System.out::println);
-		//Files.list(Path.(uploadFilePath)).forEach(System.out::println);
-		*/
-		
+		//must add local file patch here.
+		String uploadHere ="C:\\Users\\username\\eclipse-workspace\\testfolder";
 		String[] pathnames;
-		//this is where the files get uploaded from the UploadFile.jsp file
-		File f = new File("../../../Justi/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/winODS/files");
+		File f = new File(uploadHere);
 		
 		pathnames = f.list();
-		
+		PrintWriter out = null;
+	
+
 		for(String pathname : pathnames)
 		{
-				System.out.println(pathname);
+			out.println(pathname);
 	
 		}
 		
-		if(f.exists())
-		{
-			System.out.println("Exist");
-		}
-
 }
 }
