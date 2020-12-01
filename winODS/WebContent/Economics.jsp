@@ -100,15 +100,20 @@
   </div>
   
   <div class="right" style="background-color:#ddd;">
-    <h2>Search Results</h2>
-    <h3>Title</h3>
-    <p>Brief Description...</p>
-    <p>Last Updated:mm/dd/yyy</p>
-    <p>Date Published:mm/dd/yyy</p>
-    <p>Organization:____________</p>
+  
+    <a href="beatles.txt" download='beatles.txt' target="_blank">Beatles File</a> 
+      
+      <h3>File Upload test new destination:</h3>
+      Select a file to upload: <br />
+      <form action = "uploadTest.jsp" method = "post"
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" size = "50" />
+         <br />
+         <input type = "submit" value = "Upload File" />
+    
      <% 
 		//location of directory you want for the list of files
-		String listOfFiles ="C:\\Users\\username\\eclipse-workspace\\testfolder";
+		String listOfFiles ="C:\\Users\\Justi\\eclipse-workspace\\testfolder";
 		String[] pathnames;
 		File f = new File(listOfFiles);
 		
@@ -119,24 +124,17 @@
 			out.println("<br/>" + pathname);
 	
 		}
-    //This line calls the list files function from the files.java class. It should work but when running the code we were getting an error.
-    //Java code directly above is the same code to get around the error message
+    
     //files.listFiles();
      %>
+     
+   
+      </form>
   </div>
 </div>
    
-   //file to test the download functionality
-<a href="beatles.txt" download='beatles.txt' target="_blank">Beatles File</a> 
-      
-      <h3>File Upload test new destination:</h3>
-      Select a file to upload: <br />
-      <form action = "UploadFile.jsp" method = "post"
-         enctype = "multipart/form-data">
-         <input type = "file" name = "file" size = "50" />
-         <br />
-         <input type = "submit" value = "Upload File" />
-      </form>
+   
+
      
     
    
