@@ -96,7 +96,7 @@
       
       <h3>File Upload test new destination:</h3>
       Select a file to upload: <br />
-      <form action = "uploadTest.jsp" method = "post"
+      <form action = "UploadFile.jsp" method = "post"
          enctype = "multipart/form-data">
          <input type = "file" name = "file" size = "50" />
          <br />
