@@ -1,14 +1,4 @@
-<%@ page import="winODS.*" %>
-<%@ page import="java.io.*" %>
-<%@ page import="javax.servlet.http.HttpServlet.*" %>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head><!DOCTYPE html>
 <html>
    <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -73,7 +63,7 @@
 	<script type="text/javascript" src ="myjs.js"></script>
 	
   <link rel="stylesheet" href="main.css">
-<title>Economics</title>
+<title>Agriculture</title>
    </head>
    
    <body>
@@ -86,8 +76,8 @@
     <ul id="myMenu">
       <li><a href="#">Download Search Results</a></li>
       <li><a href="#">Suggest Data</a></li>
-      <li><a href="#">Agriculture</a></li>
-      <li><a href="#">Economics</a></li>
+      <li><a href="Agriculture.jsp">Agriculture</a></li>
+      <li><a href="Economics.jsp">Economics</a></li>
       <li><a href="#">Education</a></li>
       <li><a href="#">Health and Safety</a></li>
       <li><a href="#">History</a></li>
@@ -100,33 +90,9 @@
   </div>
   
   <div class="right" style="background-color:#ddd;">
-    <h2>Search Results</h2>
-    <h3>Title</h3>
-    <p>Brief Description...</p>
-    <p>Last Updated:mm/dd/yyy</p>
-    <p>Date Published:mm/dd/yyy</p>
-    <p>Organization:____________</p>
-     <% 
-		//location of directory you want for the list of files
-		String listOfFiles ="C:\\Users\\Justi\\eclipse-workspace\\testfolder";
-		String[] pathnames;
-		File f = new File(listOfFiles);
-		
-		pathnames = f.list();
-		
-		for(String pathname : pathnames)
-		{
-			out.println("<br/>" + pathname);
-	
-		}
-    
-    //files.listFiles();
-     %>
-  </div>
-</div>
    
-   
-<a href="beatles.txt" download='beatles.txt' target="_blank">Beatles File</a> 
+  
+  
       
       <h3>File Upload test new destination:</h3>
       Select a file to upload: <br />
@@ -137,6 +103,14 @@
          <input type = "submit" value = "Upload File" />
       </form>
      
+  
+  </div>
+  
+  
+</div>
+   
+   
+
     
    
       
@@ -145,8 +119,4 @@
       
    </body>
    
-</html>
-<body>
-
-</body>
 </html>
