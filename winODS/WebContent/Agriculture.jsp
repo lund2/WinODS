@@ -92,11 +92,11 @@
   <div class="right" style="background-color:#ddd;">
    
   
-  
+  <a href="beatles.txt" download='beatles.txt' target="_blank">Beatles File</a> 
       
-      <h3>File Upload test new destination:</h3>
+      <h3>File Upload:</h3>
       Select a file to upload: <br />
-      <form action = "UploadFile.jsp" method = "post"
+      <form action = "uploadTest.jsp" method = "post"
          enctype = "multipart/form-data">
          <input type = "file" name = "file" size = "50" />
          <br />
