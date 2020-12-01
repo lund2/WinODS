@@ -108,7 +108,7 @@
     <p>Organization:____________</p>
      <% 
 		//location of directory you want for the list of files
-		String listOfFiles ="C:\\Users\\Justi\\eclipse-workspace\\testfolder";
+		String listOfFiles ="C:\\Users\\username\\eclipse-workspace\\testfolder";
 		String[] pathnames;
 		File f = new File(listOfFiles);
 		
@@ -119,7 +119,8 @@
 			out.println("<br/>" + pathname);
 	
 		}
-    
+    //This line calls the list files function from the files.java class. It should work but when running the code we were getting an error.
+    //Java code directly above is the same code to get around the error message
     //files.listFiles();
      %>
   </div>
